@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { insertionsort } from './shared/utils';
+import { insertionsort, quicksort } from './shared/utils';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +9,13 @@ import { insertionsort } from './shared/utils';
 export class AppComponent implements OnInit {
 
   title = 'angular-algorithms';
-  private arr: number[] = [5, 2, 4, 6, 1, 3]
+  private arr: number[] = [5, 2, 4, 6, 10, 3]
 
   ngOnInit(): void {
     let result = insertionsort(this.arr)
+    // let result = quicksort(this.arr)
     setTimeout(() => {
-      console.log(this.arr)
-    }, 500)
-    
+      console.log(result)
+    }, 1000)
   }
 }
