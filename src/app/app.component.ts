@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { insertionsort, quicksort } from './shared/utils';
+import { insertion_sort, quick_sort, merge_sort, heap_sort } from './shared/utils';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +12,13 @@ export class AppComponent implements OnInit {
   private arr: number[] = [5, 2, 4, 6, 10, 3]
 
   ngOnInit(): void {
-    let result = insertionsort(this.arr)
+    console.log(this.arr)
+    let result = heap_sort(this.arr)
+    
     // let result = quicksort(this.arr)
     setTimeout(() => {
-      console.log(result)
+      console.log(this.arr) // for heap_sort
+      console.log(result)   // for restsort
     }, 1000)
   }
 }
