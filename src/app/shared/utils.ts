@@ -90,6 +90,27 @@ function heapify(arr: any[], n: number, i: number) {
         heapify(arr, n, largest)
     }
 }
+
 // searching algorithms
+
+
+export function binary_search(arr: any[], x: any) {
+    let low: number = 0
+    let high = arr.length - 1
+    while (low <= high) {
+        let mid: number = ~~((high + low) / 2)
+        switch (true) {
+            case (arr[mid] < x):
+                low = mid + 1
+                break
+            case (arr[mid] > x):
+                high = mid - 1
+                break
+            default:
+                return mid
+        }
+    }
+    return -1
+}
 
 // graph algorithms
