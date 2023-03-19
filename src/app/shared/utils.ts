@@ -93,7 +93,6 @@ function heapify(arr: any[], n: number, i: number) {
 
 // searching algorithms
 
-
 export function binary_search(arr: any[], x: any) {
     let low: number = 0
     let high = arr.length - 1
@@ -113,4 +112,29 @@ export function binary_search(arr: any[], x: any) {
     return -1
 }
 
+export class Hashtable {
+    private size: number = 10
+    private keys: number = this.size
+    private values: number = this.size
+
+    private put() {
+
+    }
+}
+
+export function hashtable() {
+
+}
+
 // graph algorithms
+
+// dynamic programming
+
+export function fibonacci(n: number): any {
+    switch (true) {
+        case (n <= 0): return 0
+        case (n == 1): return 1
+        default:
+            return fibonacci(n-1) + fibonacci(n-2)
+    }
+}
